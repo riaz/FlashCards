@@ -1,3 +1,6 @@
+[project]
+name = "flashcards"
+
 [tool.poetry]
 name = "repl-nix-flashcardpoetryapp"
 version = "0.1.0"
