@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Flashcards</h2>
+<div id="flashcards-container">
+    {% for flashcard in flashcards %}
+    <div class="flashcard" data-id="{{ flashcard.id }}">
+        <h3>{{ flashcard.title }}</h3>
+        <p>{{ flashcard.content }}</p>
+        <div class="flashcard-actions">
+            <button class="like-btn" data-id="{{ flashcard.id }}">Like ({{ flashcard.likes }})</button>
+            <button class="dislike-btn" data-id="{{ flashcard.id }}">Dislike ({{ flashcard.dislikes }})</button>
+            <button class="delete-btn" data-id="{{ flashcard.id }}">Delete</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
